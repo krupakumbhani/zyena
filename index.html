@@ -126,7 +126,7 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Digital Timer Machines</h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -272,7 +272,8 @@
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -584,6 +585,10 @@
       spaceBetween: 30,
       freeMode: true,
       keyboard: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
   </script>
   <script>
