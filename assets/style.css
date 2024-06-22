@@ -1,6 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+  --bg-color: #fff;
+  --dark-bg-color: #f5f5f5;
+  --btn-bg-color: #8d99a5;
+  --heading-color: rgb(16 16 102);
+  --description-color:rgb(26 26 89 / 94%);
+  --btn-color:#fff;
+  --h1-size: 50px;
+  --h2-size: 37px;
+  --h3-size: 25px;
+  --p-size: 16px;
+  --btn-text-size: 14px;
+  --font-family:"Open Sans";
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,11 +27,11 @@ nav {
 }
 
 nav .nav-item > .nav-link {
-  font-family:  "Open Sans";
+  font-family:  var(--font-family);
   font-weight: 400;
   font-style: normal;
-  color: rgb(16 16 102) !important;
-  font-size: 0.875rem;
+  color: var(--heading-color) !important;
+  font-size: var(--btn-text-size);
   padding: 0.8rem 1.2rem !important;
 }
 nav .navbar-brand img {
@@ -24,10 +39,7 @@ nav .navbar-brand img {
   width: 90px;
 }
 
-nav .nav-item > .nav-link.active {
-
-}
-nav .nav-item > .nav-link:hover {
+nav .nav-item > .nav-link.active ,nav .nav-item > .nav-link:hover {
   font-weight: 500;
   transform: scale(1.05);
   transition: transform 0.5s;
@@ -37,10 +49,11 @@ nav .nav-item > .nav-link:hover {
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding: 100px 0; /* Adjust as needed */
+  height: calc(100vh - 80px);
+  background: linear-gradient(to right, #ffffff, #d0d3d6);
 }
 
-.hero-bg {
+/* .hero-bg {
   position: absolute;
   top: 0;
   right: 0;
@@ -51,52 +64,62 @@ nav .nav-item > .nav-link:hover {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+} */
+ .hero-bg img{
+  height: auto;
+  width: -webkit-fill-available;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1; /* Ensure content is above the background image */
+  z-index: 1;
   padding: 20px 0px;
-  color: rgb(16 16 102);
   text-align: start;
-  font-family:  "Open Sans"; /* Semi-transparent background color for better readability */
+  font-family: var(--font-family) ;
 }
 
 .hero-content h1 {
-  font-size: 50px;
+  font-size: var(--h1-size);
+  /* font-size: 10px; */
   font-weight: 700;
-  line-height: 60px;
+  color: var(--heading-color);
 }
 .hero-content p {
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(26 26 89 / 94%);
+  font-size: var(--p-size);
+  font-weight: 500;
+  color: var(--description-color);
 }
 .cylindrical-btn {
-  border-radius: 10px; /* Adjust the value to make the button more or less cylindrical */
+  border-radius: 10px; 
   padding: 10px 20px;
-  background-color: #8d99a5; /* Button background color */
-  color: #fff; /* Button text color */
+  background-color: var(--btn-bg-color); 
+  color: var(--btn-color);
   border: none;
   outline: none;
   cursor: pointer;
-  /* transition: background-color 0.3s ease; */
   line-height: 1.4;
   cursor: pointer;
-   font-family: "Open Sans";
+  font-family: var(--font-family);
   font-weight: 400;
   font-style: normal;
-  color: #fff;
-  font-size: 14px;
+  font-size: var(--btn-text-size);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .cylindrical-btn:hover {
-  color: #fff;
+  color: var(--btn-color);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
   
 }
+.typewriter {
+  overflow: hidden; /* Ensures the text is not visible outside of the container */
+  white-space: nowrap; /* Keeps the text on one line */
+  margin: 0 auto; /* Centers the text */
+ 
+}
+
+
 
 /* ----------------------------------------------------------------------------------------------------- */
 .swiper {
@@ -106,8 +129,8 @@ nav .nav-item > .nav-link:hover {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
+  font-size: var(--p-size);
+  background: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,17 +145,17 @@ nav .nav-item > .nav-link:hover {
 }
 
 .main-products-section {
-  padding: 100px 0px;
-  background-color: #f5f5f5;
+  padding: 60px 0px;
+  background-color: var(--dark-bg-color);
 }
 .main-products-section h2 {
   text-align: center;
-   font-family: "Open Sans";
+  font-family: var(--font-family);
   line-height: 50px;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  color: rgb(16 16 102);
-  font-size: 40px;
+  color: var(--heading-color);
+  font-size: var(--h2-size);
   margin-bottom: 30px;
 }
 
@@ -146,32 +169,32 @@ nav .nav-item > .nav-link:hover {
   border-radius: 1rem; 
 }
 .card .card-body {
-  background-color: #f5f5f5;
+  background-color: #e9ecee;
   transition: margin-top 0.5s ease;
   border-bottom-left-radius: 0.75rem;
   border-bottom-right-radius: 0.75rem;
 }
-.card:hover > .card-body {
-  background-color: white;
+/* .card:hover > .card-body {
+  background-color: var(--bg-color);
   margin-top: -10px;
-}
+} */
 
 .card .card-body .card-title {
-   font-family: "Open Sans";
+  font-family: var(--font-family);
   line-height: 22px;
   font-weight: 400;
   font-style: normal;
-  color: rgb(16 16 102);
-  font-size: 16px;
+  color: var(--heading-color);
+  font-size: var(--p-size);
 }
 
 .card .card-body .card-text {
-  font-family:  "Open Sans";
+  font-family: var(--font-family);
   line-height: 22px;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
-  color: rgb(26 26 89 / 94%);
+  font-size: var(--p-size);
+  color: var(--description-color);
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
