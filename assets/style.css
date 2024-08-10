@@ -46,6 +46,9 @@ nav .nav-item > .nav-link:hover {
   transform: scale(1.05);
   transition: transform 0.5s;
 }
+.dropdown-menu li{
+  padding: 2px 0px;
+}
 
 /* ----------------------------------------------------------------------------------------------------- */
 .hero-section {
@@ -167,7 +170,7 @@ nav .nav-item > .nav-link:hover {
 }
 
 .card {
-  width: 19rem !important;
+  width: 100% !important;
   border: none;
   border-radius: 0.75rem;
   cursor: pointer;
@@ -298,17 +301,18 @@ nav .nav-item > .nav-link:hover {
   position: relative;
   margin: 10% auto !important;
   padding: 0;
-  width: 80%;
-  max-width: 700px;
+  width: fit-content;
+  
 }
 .close {
   position: absolute;
-  top: 14px;
-  right: 145px;
+  top: 0;
+  right: 0;
   color: var(--bg-color);
-  font-size: 35px;
+  font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  padding-right: 3px;
 }
 .close:hover,
 .close:focus {
@@ -325,7 +329,7 @@ nav .nav-item > .nav-link:hover {
   display: flex; /* Use flex display to align items */
   justify-content: center; /* Center align items horizontally */
 }
-.widget-section .col-lg-3 {
+.widget-box > div {
   padding: 0;
   display: flex; /* Use flex display for column items */
   align-items: stretch;
