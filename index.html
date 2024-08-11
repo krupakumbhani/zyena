@@ -238,6 +238,7 @@
                   src="assets/images/machine.jpeg"
                   alt="About Zyena Engineers"
                   class="img-fluid"
+                  id="video-thumbnail"
                 />
                 <button class="play-button" onclick="playVideo()">
                   <svg xmlns="" viewBox="0 0 384 512">
@@ -255,22 +256,10 @@
                     />
                   </svg>
                 </button>
-              </div>
-              <div id="video-modal" class="video-modal">
-                <div class="video-modal-content">
-                  <span class="close" onclick="closeVideo()">&times;</span>
-                  <iframe
-                    id="video-frame"
-                    width="560"
-                    height="315"
-                    src=""
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
+                <video id="video-player" class="video-player" controls style="display:none;">
+                  <source src="assets/videos/jarkhan_machine.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -526,11 +515,18 @@
   </script>
   <script>
     function playVideo() {
-      var modal = document.getElementById("video-modal");
-      var iframe = document.getElementById("video-frame");
-      modal.style.display = "block";
-      iframe.src = "https://www.youtube.com/embed/hz-kk6dBKG8?autoplay=1";
-    }
+  var thumbnail = document.getElementById("video-thumbnail");
+  var playButton = document.querySelector(".play-button");
+  var videoPlayer = document.getElementById("video-player");
+
+  // Hide the thumbnail and play button
+  thumbnail.style.display = "none";
+  playButton.style.display = "none";
+
+  // Show the video player and play the video
+  videoPlayer.style.display = "block";
+  videoPlayer.play();
+}
 
     function closeVideo() {
       var modal = document.getElementById("video-modal");
