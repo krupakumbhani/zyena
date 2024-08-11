@@ -1,94 +1,130 @@
 @media only screen and (max-width: 992px) {
-    .hero-section{
-        height: 80vh;
-    }
-    .hero-section .row{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    nav .nav-item > .nav-link.active, nav .nav-item > .nav-link:hover{
-        transform: unset;
-        transition: none;
-    }
-    .footer-logo img{
-        width: 90px;
-    }
-    .site-footer .row{
-        row-gap: 15px;
-    }
-    .contact-section .contact-left{
-        max-width: none;
-       
-    }
+  .hero-section {
+    height: 80vh;
+  }
+  .hero-section .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .nav-item > .nav-link.active,
+  nav .nav-item > .nav-link:hover {
+    transform: unset;
+    transition: none;
+  }
+  .footer-logo img {
+    width: 90px;
+  }
+  .site-footer .row {
+    row-gap: 15px;
+  }
+  .contact-section .contact-left {
+    max-width: none;
+  }
+  .pdp-section .prod-title {
+    margin-top: 50px;
+  }
+  .faqs,
+  .pricing,
+  .applications,
+  .specifications {
+    padding-bottom: 70px;
+  }
+  .assistance {
+    margin-bottom: 70px;
+  }
+  .pdp-section,
+  .contact-section,
+  .main-products-section,
+  .about-us-section,
+  .widget-section {
+    padding: 70px 20px;
+  }
+
 }
 @media only screen and (max-width: 768px) {
-    .about-us-section-left{
-        padding-right: 0px;
-        margin-bottom: 10%;
-    }
-    .video-wrapper{
-        display: block;
-        margin: 0 auto;
-    }
-    .prod-title, .why-us-section h2, .about-us-section h2{
-        font-size: 32px;
-        margin-bottom: 15px;
-    }
-    .why-us--description, .about-us-section p{
-        font-size: 14px;
-    }
-    .card .card-body .card-text {
-        font-size: 14px;
-    }
-   
-    
+  .about-us-section-left {
+    padding-right: 0px;
+    margin-bottom: 10%;
+  }
+  .video-wrapper {
+    display: block;
+    margin: 0 auto;
+  }
+  .prod-title,
+  .why-us-section h2,
+  .about-us-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .why-us--description,
+  .about-us-section p {
+    font-size: 14px;
+  }
+  .card .card-body .card-text {
+    font-size: 14px;
+  }
+  
 }
 @media only screen and (max-width: 576px) {
-    .hero-content p{
-        font-size: 14px;
-    }
-    .hero-section .since-text{
-font-size: 12px;
-    }
-    .since-text::before{
-        font-size: 32px;
-    }
-
-.hero-content h1{
+  .hero-content p {
+    font-size: 14px;
+  }
+  .hero-section .since-text {
+    font-size: 12px;
+  }
+  .since-text::before {
     font-size: 32px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .cylindrical-btn {
+    font-size: 13px;
+    padding: 9px 16px;
+    border-radius: 5px;
+  }
+  
+  .widget-box {
+    row-gap: 10px;
+  }
+  .widget-wrap {
+    padding: 40px 20px;
+  }
+  .contact-section .contact-left {
+    max-width: none;
+    padding: 15px;
+    align-items: flex-start;
+  }
+  .contact_address p br {
+    display: none;
+  }
+  .contact-section h2 {
+    font-size: 32px;
+  }
+  .accordion__answer,.prod-spef,.prod-spef span,.prod-description ,.contact-left > div {
+    font-size: 14px;
+  }
+  .overlay-container {
+    height: 150px;
+  }
+  
+ 
+  .accordion__question{
+    font-size: 18px;
+  }
+  .accordion__header{
+    align-items: baseline;
+  }
+  .accordion__icon{
+    width: 20px;
+    height: 20px;
+  }
+  .accordion__answer{
+    padding-left: 10px;
+  }
+  .prod-size{
+    padding: 7px 20px;
 }
-    .cylindrical-btn{
-        font-size: 13px;
-        padding: 9px 16px;
-        border-radius: 5px;
-    }
-    .contact-section,
-    .main-products-section,
-    .about-us-section,
-    .widget-section{
-        padding: 70px 20px;
-    }
-    .widget-box{
-        row-gap: 10px;
-    }
-    .widget-wrap{
-        padding: 40px 20px;
-    }
-    .contact-section .contact-left{
-        max-width: none;
-        padding: 15px;
-        align-items: flex-start;
-    }
-    .contact_address p br{
-        display: none;
-    }
-    .contact-section h2{
-        font-size: 32px;
-    }
-    .contact-left > div{
-        font-size: 14px;
-    }
-   
-   
 }
