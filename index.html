@@ -5,6 +5,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./assets/images/favicon_io/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./assets/images/favicon_io/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="./assets/images/favicon_io/favicon-16x16.png"
+  />
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./assets/images/favicon_io/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./assets/images/favicon_io/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="./assets/images/favicon_io/favicon-16x16.png"
+  />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -26,7 +60,7 @@
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./index.html">
           <img src="assets/images/Zyena_color_logo.png" alt="Zyena" />
         </a>
         <button
@@ -132,7 +166,7 @@
                     rhinestones, studs, and other embellishments to fabrics with
                     precision and ease.
                   </p>
-                  <a href="#" class="btn cylindrical-btn">View more</a>
+                  <a href="./hotfix.html" class="btn cylindrical-btn">View more</a>
                 </div>
               </div>
             </div>
@@ -150,7 +184,7 @@
                     and shaking of materials in the textile and garment
                     industries.
                   </p>
-                  <a href="#" class="btn cylindrical-btn">View more</a>
+                  <a href="./jarkan.html" class="btn cylindrical-btn">View more</a>
                 </div>
               </div>
             </div>
@@ -168,7 +202,7 @@
                     precision cutting, engraving, and shaping of various
                     materials.
                   </p>
-                  <a href="#" class="btn cylindrical-btn">View more</a>
+                  <a href="./cnc.html" class="btn cylindrical-btn">View more</a>
                 </div>
               </div>
             </div>
@@ -185,7 +219,7 @@
                     The Paper Cutting Machine is designed for high-speed,
                     precise cutting of paper and other thin materials.
                   </p>
-                  <a href="#" class="btn cylindrical-btn">View more</a>
+                  <a href="./papercutting.html" class="btn cylindrical-btn">View more</a>
                 </div>
               </div>
             </div>
@@ -203,7 +237,7 @@
                     efficiently apply rhinestones to templates before heat
                     pressing.
                   </p>
-                  <a href="#" class="btn cylindrical-btn">View more</a>
+                  <a href="./rhinestone.html" class="btn cylindrical-btn">View more</a>
                 </div>
               </div>
             </div>
@@ -454,93 +488,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
-  <script>
-    // Text for typewriter effect
-    const text = "Machine Manufacturer";
-
-    // Delay between each character (in milliseconds)
-    const delay = 150;
-
-    // Get the element where the typewriter effect will be applied
-    const typewriterHeading = document.getElementById("typewriter");
-
-    // Initialize index to 0
-    let charIndex = 0;
-
-    // Function to display text with typewriter effect
-    function typeWriter() {
-      if (charIndex < text.length) {
-        typewriterHeading.textContent += text.charAt(charIndex);
-        charIndex++;
-        setTimeout(typeWriter, delay);
-      }
-    }
-
-    // Start the typewriter effect when the page loads
-    window.onload = function () {
-      typeWriter();
-    };
-  </script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-        },
-        576: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        800: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        
-        1200:{
-          slidesPerView: 4,
-          spaceBetween: 30,
-        }
-      },
-      freeMode: true,
-      keyboard: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-  <script>
-    function playVideo() {
-  var thumbnail = document.getElementById("video-thumbnail");
-  var playButton = document.querySelector(".play-button");
-  var videoPlayer = document.getElementById("video-player");
-
-  // Hide the thumbnail and play button
-  thumbnail.style.display = "none";
-  playButton.style.display = "none";
-
-  // Show the video player and play the video
-  videoPlayer.style.display = "block";
-  videoPlayer.play();
-}
-
-    function closeVideo() {
-      var modal = document.getElementById("video-modal");
-      var iframe = document.getElementById("video-frame");
-      modal.style.display = "none";
-      iframe.src = "";
-    }
-
-    window.onclick = function (event) {
-      var modal = document.getElementById("video-modal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-        var iframe = document.getElementById("video-frame");
-        iframe.src = "";
-      }
-    };
-  </script>
+  <script src="./assets/js/typewriter.js"></script>
+  <script src="./assets/js/prodSwiper.js"></script>
+  
+  <script src="./assets/js/playVideo.js"></script>
 </html>

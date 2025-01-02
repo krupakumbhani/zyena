@@ -1035,5 +1035,25 @@ video.video-player {
 .contact-form .submit-btn:hover {
   background-color: #8d99a5bd;
 }
+.contactus.contact-left > div svg{
+  margin-top: 5px;
+}
+.contact-form h2{
+  font-family: var(--heading-font-family);
+    color: var(--heading-color);
+    line-height: 50px;
+    font-weight: 600;
+    font-style: normal;
+    font-size: var(--h2-size);
+    /* text-align: left; */
+}
+.contactus-div{
+  padding: 20px;
+}
+.contactus-div h2{
+ margin-bottom: 20px;
+}
 
-
+.service-img{
+  width: 100%;
+}

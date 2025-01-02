@@ -2,7 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>zyena-contact us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./assets/images/favicon_io/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./assets/images/favicon_io/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="./assets/images/favicon_io/favicon-16x16.png"
+  />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -32,7 +50,7 @@
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+       <a class="navbar-brand" href="./index.html">
           <img src="assets/images/Zyena_color_logo.png" alt="Zyena" />
         </a>
         <button
@@ -105,6 +123,7 @@
             
            
             <div class="contact-form">
+              <h2>Get a free quote</h2>
               <form action="https://formsubmit.co/zyenaengineers@gmail.com" method="post">
                 <div class="form-group">
                   <label for="name">Name</label>
@@ -132,7 +151,7 @@
               </form>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 contactus-div">
             <h2 class="prod-title">Our Contact Information</h2>
             <p class="prod-description">
               We’re here to help! Whether you have questions about our products,
@@ -142,7 +161,7 @@
             </p>
 
             <div class="contactus contact-left">
-              <div>
+              <div class="contact_address">
                 <svg height="22px" width="22px" xmlns="" viewBox="0 0 384 512">
                   <path
                     d="M336 192c0-79.5-64.5-144-144-144S48 112.5 48 192c0 16.3 7.7 42 24.7 75.4c16.4 32.2 38.8 66.4 62.1 98.3c20.3 27.9 40.7 53.3 57.2 73.1c16.5-19.8 36.9-45.2 57.2-73.1c23.2-31.9 45.6-66.2 62.1-98.3C328.3 234 336 208.3 336 192zm48 0c0 83.1-105.6 219-160.2 283.6C204.8 498.1 192 512 192 512s-12.8-13.9-31.8-36.4C105.6 411 0 275.1 0 192C0 86 86 0 192 0S384 86 384 192zm-160 0a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm-112 0a80 80 0 1 1 160 0 80 80 0 1 1 -160 0z"
@@ -253,70 +272,6 @@
       </div>
     </footer>
     <!-- footer section end -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var slider = new Swiper(".gallery-slider", {
-          slidesPerView: 1,
-          centeredSlides: true,
-          loop: true,
-          loopedSlides: 6, //スライドの枚数と同じ値を指定
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-
-        var thumbs = new Swiper(".gallery-thumbs", {
-          slidesPerView: "auto",
-          spaceBetween: 10,
-          centeredSlides: true,
-          loop: true,
-          slideToClickedSlide: true,
-        });
-
-        slider.controller.control = thumbs;
-        thumbs.controller.control = slider;
-      });
-    </script>
-    <script>
-      const accordions = document.querySelectorAll(".accordion");
-
-      accordions.forEach((accordion) => {
-        const header = accordion.querySelector(".accordion__header");
-        const content = accordion.querySelector(".accordion__content");
-        const icon = accordion.querySelector(".accordion__icon i");
-
-        header.addEventListener("click", () => {
-          const isOpen = content.style.height === `${content.scrollHeight}px`;
-
-          // Close all other accordions
-          accordions.forEach((otherAccordion) => {
-            const otherContent = otherAccordion.querySelector(
-              ".accordion__content"
-            );
-            const otherIcon =
-              otherAccordion.querySelector(".accordion__icon i");
-
-            if (otherAccordion !== accordion) {
-              otherContent.style.height = "0px";
-              otherIcon.classList.remove("fa-minus");
-              otherIcon.classList.add("fa-plus");
-            }
-          });
-
-          // Toggle the clicked accordion
-          if (isOpen) {
-            content.style.height = "0px";
-            icon.classList.remove("fa-minus");
-            icon.classList.add("fa-plus");
-          } else {
-            content.style.height = `${content.scrollHeight}px`;
-            icon.classList.remove("fa-plus");
-            icon.classList.add("fa-minus");
-          }
-        });
-      });
-    </script>
+   
   </body>
 </html>
