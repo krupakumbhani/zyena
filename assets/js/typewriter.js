@@ -1,35 +1,20 @@
-// Text for typewriter effect
-const text = "Machine Manufacturer";
 
-// Get the element where the typewriter effect will be applied
+const text = "Machine Manufacturer";
 const typewriterHeading = document.getElementById("typewriter");
 
-// Initialize index to 0
 let charIndex = 0;
-let lastTime = 0;
-const delay = 50; // Reduced delay for faster typing
+const delay = 50;
 
-// Function to display text with typewriter effect
-function typeWriter(timestamp) {
-    if (!lastTime) lastTime = timestamp;
-    const elapsed = timestamp - lastTime;
-
-    if (elapsed >= delay) {
-        if (charIndex < text.length) {
-            typewriterHeading.textContent += text.charAt(charIndex);
-            charIndex++;
-            lastTime = timestamp;
-        }
-    }
-
+function typeWriter() {
     if (charIndex < text.length) {
-        requestAnimationFrame(typeWriter);
+        typewriterHeading.textContent += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, delay);
     }
 }
 
-// Start the typewriter effect when the page loads
-window.addEventListener('load', () => {
-    // Preload the text content
+// Use DOMContentLoaded instead of window.load
+document.addEventListener('DOMContentLoaded', () => {
     typewriterHeading.textContent = '';
-    requestAnimationFrame(typeWriter);
+    typeWriter(); // Start typing immediately after DOM is ready
 });
