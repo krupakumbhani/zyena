@@ -406,6 +406,33 @@
     </section>
     <!-- contact section end  -->
 
+    <!-- ✅ Chatbot iframe with inline styles and toggle button -->
+    <div id="chatbot-wrapper" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+      <button onclick="toggleChatbot()" id="chatbot-toggle-btn"
+        style="position: absolute; bottom: 100%; right: 0; margin-bottom: 10px; background-color: #e0e0e0; color: #333; border: none; padding: 8px 12px; border-radius: 20px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.2); font-size: 12px; white-space: nowrap;">
+        Zyena AI Assistance
+      </button>
+      <iframe id="chatbot-frame"
+              src="https://www.chatbase.co/chatbot-iframe/YGeJEo_vX8lf8F-k4_ngu"
+              style="width: 350px; height: 500px; border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: none;">
+      </iframe>
+    </div>
+    
+    <script>
+      function toggleChatbot() {
+        const iframe = document.getElementById("chatbot-frame");
+        const btn = document.getElementById("chatbot-toggle-btn");
+    
+        if (iframe.style.display === "none") {
+          iframe.style.display = "block";
+          btn.textContent = "X";
+        } else {
+          iframe.style.display = "none";
+          btn.textContent = "Zyena AI Assistance";
+        }
+      }
+    </script>
+
    <!-- footer section start -->
    <footer class="site-footer">
     <div class="container">
